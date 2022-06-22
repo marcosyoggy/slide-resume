@@ -1,0 +1,89 @@
+/* XXXXXXXXXXXXXXXXXXXXX GRID_SLIDES  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
+
+a {
+    display: none;
+  }
+  
+  @media(max-width: 1300px){
+  .g-slides {
+      display: grid;
+    
+      border: 2px solid red;
+      background-color: lightgray;
+      margin: auto;
+      padding: 5px;
+      height: 75vh;
+    
+      grid-template-areas: '. b1 b1 b1 .'
+                           'b2 b1 b1 b1 b3' 
+                           '. b1 b1 b1 .' 
+                           '. b4 b5 b6 .';
+      grid-template-rows: 160px 60px 190px 55px;                        
+      grid-template-columns: 0fr 1fr;
+    }
+  
+  
+  .b-01-image {
+      grid-area: b1;
+      background-color: #8ca0ff;
+      margin: 5px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .b-02 {
+      grid-area: b2;
+      display: flex;
+      background-color: #8ca0ff;
+      align-items:center;
+      justify-content: center;
+      width: 60px;
+    }
+    .b-03 {
+      grid-area: b3;
+      display: flex;
+      background-color: #8ca0ff;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+    }
+  
+  .b-slide {
+      grid-area: b4;
+      background-color: #8ca0ff;
+      border-radius: 8px;
+    }
+    .b-05seg {
+      grid-area: b5;
+      background-color: #8ca0ff;
+      border-radius: 40px;
+    }
+    .b-1seg {
+      grid-area: b6;
+      background-color: #8ca0ff;
+      border-radius: 40px;
+    }
+  
+    .b-02, .b-03 {
+      border: 1px solid black;
+      border-radius: 100%;
+      background-color: lime;
+      cursor: pointer;
+    }
+  
+    .b-slide, .b-05seg, .b-1seg {
+      border: 1px solid black;
+      cursor: pointer;
+      background-color: lightgreen;
+      margin-right: 2px;
+    }
+    .g-slides> button:hover {
+      background-color: magenta;
+      color: white; 
+    }
+  }
+  
+    .b-01-image {
+      /* background-image: url("../images/JPG/img-(3).jpg"); */
+      background-size: cover;
+      background-position:top;
+    }
