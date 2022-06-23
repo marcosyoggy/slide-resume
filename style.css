@@ -1,10 +1,14 @@
 /* XXXXXXXXXXXXXXXXXXXXX GRID_SLIDES  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX */
 
-a {
-    display: none;
-  }
+/* class="b-05seg">0.5seg
+class="b-1seg">1.0seg */
+
+/* .b-05seg:visited {
+  background-color: crimson;
+  color: white; 
+} */
   
-  @media(max-width: 1300px){
+  @media(max-width: 1366px){
   .g-slides {
       display: grid;
     
@@ -30,6 +34,7 @@ a {
       margin: 5px;
       border-radius: 4px;
       text-align: center;
+
     }
     .b-02 {
       grid-area: b2;
@@ -136,6 +141,7 @@ a {
       margin: 5px;
       border-radius: 4px;
       text-align: center;
+
     }
     .b-02 {
       grid-area: b2;
@@ -217,6 +223,7 @@ a {
 
 
   @media(max-width: 700px){
+
   .g-slides {
       display: grid;
     
@@ -400,8 +407,4 @@ a {
     }
   }/*fim media max-500*/
   
-    .b-01-image {
-      /* background-image: url("../images/JPG/img-(3).jpg"); */
-      background-size: cover;
-      background-position:top;
-    }
+    
