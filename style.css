@@ -17,13 +17,13 @@ class="b-1seg">1.0seg */
       margin: auto;
       padding: 5px;
       max-width: 45vw;
-      height: 75vh;
+      height: 95vh;
     
       grid-template-areas: '. b1 b1 b1 .'
                            'b2 b1 b1 b1 b3' 
                            '. b1 b1 b1 .' 
                            '. b4 b5 b6 .';
-      grid-template-rows: 160px 60px 190px 55px;                        
+      grid-template-rows: 166px 60px 308px 62px;                        
       grid-template-columns: 0fr 1fr;
     }
   
