@@ -7,6 +7,7 @@ class="b-slide">Start Slides
 class="b-05seg">0.5seg
 class="b-1seg">1.0seg
 
+git: https://github.com/marcosyoggy/slide-resume
 gitpages: https://marcosyoggy.github.io/slide-resume/
 netlify: https://slide-resume.netlify.app/
 
