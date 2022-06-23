@@ -1,18 +1,7 @@
 /*
-class="g-slides">-main div
-class="b-01-image"
-class="b-02">Previus</
-class="b-03">Nextius</
-class="b-slide">Start Slides
-class="b-05seg">0.5seg
-class="b-1seg">1.0seg
-
 git: https://github.com/marcosyoggy/slide-resume
 gitpages: https://marcosyoggy.github.io/slide-resume/
 netlify: https://slide-resume.netlify.app/
-
-
-
 */
 
 const button_Start_Slide = document.querySelector('.b-slide')
@@ -24,7 +13,8 @@ const div_Image = document.querySelector('.b-01-image')
 
 let counter = 0
 const speed_500ms = 500
-const speed_1000ms = 1000
+const speed_1000ms = 1500
+let time_Slide = 1500
 
 const init_slide = () => {
     div_Image.style.backgroundImage = 'url("./JPG/img-(0).jpg")'
@@ -62,104 +52,27 @@ const slide_Prev = (counter_Prev) => {
         : set_Image_Style(counter_Prev)
     }
 
-const start_Slide = e => {
-    console.log(e.target)
+const start_Slide = () => {
     const my_ID = setInterval(() => {
     counter++
-    console.log(`Este é o ${counter}°`)
     slide_Next(counter)
 
     counter === 6 
         ? clearInterval(my_ID)
         : null
-}, time_Slide());
+
+}, time_Slide);
 }   
-
-const time_Slide = (time_Speed) => console.log(time_Speed)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 init_slide()
 
 button_Nextius.addEventListener('click', () => slide_Next(++counter))
 button_Previus.addEventListener('click', () => slide_Prev(--counter))
 
-button_Start_Slide.addEventListener('click', start_Slide)
+button_Start_Slide.addEventListener('click', () => {
+    start_Slide()
+    button_Start_Slide.textContent = `Time Slide: ${time_Slide} ms.`
+})
 
-speed_Slide_05seg.addEventListener('click', e => time_Slide(speed_500ms))
-speed_Slide_1seg.addEventListener('click', e => time_Slide(speed_1000ms))
-
-
-
-
-
-
-
-
-
-// const my_ID = setInterval(() => {
-//     counter++
-//     console.log(counter)
-
-//     counter === 5 
-//         ? clearInterval(my_ID)
-//         : null
-// }, 1000);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-.b-01-image {
-      background-image: url("./JPG/img-(1).jpg");
-      background-size: cover;
-      background-position:top;
-    }
-*/
+speed_Slide_05seg.addEventListener('click', () => time_Slide = 500)
+speed_Slide_1seg.addEventListener('click', () =>  time_Slide = 1500)
